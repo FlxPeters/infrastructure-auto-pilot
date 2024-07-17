@@ -78,7 +78,7 @@ image::images/automate_all_the_things1.jpeg[]
 
 == Auto Pilot Operations
 
-Vorgehen | Herausforderungen | Lessons Learned
+Ziele | Vorgehen | Lessons Learned
 
 _am Beispiel Hashicorp Vault_
 
@@ -176,3 +176,7 @@ tl;dr: Initial Aufwand, lohnt im long run
 Was lohnen ist kommt aber auf den Stack und das Projekt an
 -> Hilft aber sich aufs wesentliche zu konzentrieren
 --
+
+== Fragen und Diskussion
+
+Jetzt seid ihr dran!
