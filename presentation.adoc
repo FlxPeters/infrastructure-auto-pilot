@@ -29,7 +29,14 @@ image::images/woody.jpg[]
 * Off the Shelf Software
 * ...
 
+[%notitle]
 === Softwarestack
+
+[.notes]
+--
+Wie viele Softwarekomponenten sind in eurem Stack?
+Was ist alles versioniert?
+--
 
 image::images/vault-stack.png[]
 
@@ -95,17 +102,30 @@ image::images/renovate.jpg[]
 Automated dependency updates +
 Multi-platform and multi-language
 
-https://github.com/renovatebot/renovate
+=== Renovate
+
+* Automatisches Updaten von Abhängigkeiten als Merge Request
+* Von Terraform-Providern über RDS bis zu Docker Images
+* Konfigurierbar (z.B. nach Package Typ)
+* Shared Service bereitgestellt von OCT
 
 [%notitle]
-=== Renovate-2
+=== Renovate
+
+image::images/renovate-list.png[]
+
+[%notitle]
+=== Renovate
 
 image::images/renovate.png[]
+
+
+[.notes]
 
 === Vorbedingungen
 
 * Semantic Versioning
-* Trunk based Development in Git(Lab)
+* (Trunk based) Development in GitLab
 * Gitlab Pipelines
 * Automatisierung mit z.B. Terraform
 * Tests mit z.B. Terratest
@@ -152,6 +172,14 @@ Es kann nur einen geben
 * Renovate ist der führende Version-Manager
 * Automatische interne Upgrades (z.B. RDS) müssen deaktiviert sein
 * Dafür ist aber immer eine definierte Version ausgerollt
+
+=== Lessons Learned
+
+[quote]
+Wait for it
+
+* x.x.0 haben gerne noch Fehler
+* Wartezeit für Renovate einbauen
 
 === Lessons Learned
 
