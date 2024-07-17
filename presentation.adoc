@@ -25,7 +25,7 @@ image::images/woody.jpg[]
 
 * Terraform Provider
 * Docker Images
-* Software Dependecies (Go, Java, Node etc.)
+* Software Dependencies (Go, Java, Node etc.)
 * Off the Shelf Software
 * ...
 
@@ -84,7 +84,7 @@ _am Beispiel Hashicorp Vault_
 
 === Zielsetzung
 
-Der Softwarestack soll jederzeit, *vollständig automatisch* ohne interaktion eines Menschen aktualisiert werden.
+Der Softwarestack soll jederzeit, *vollständig automatisch* ohne Interaktion eines Menschen aktualisiert werden.
 
 _Im Fehlerfall soll ein Rollback stattfinden._
 
@@ -107,7 +107,7 @@ image::images/renovate.png[]
 * Semantic Versioning
 * Trunk based Development in Git(Lab)
 * Gitlab Pipelines
-* Automatisierung mit z.B. Terrafom
+* Automatisierung mit z.B. Terraform
 * Tests mit z.B. Terratest
 
 [.notes]
@@ -137,7 +137,7 @@ image::images/pipeline.png[]
 === Lessons Learned
 
 [quote]
-Ohne gute Tests geht's nichts
+Ohne gute Tests geht nichts
 
 * Unit-Test für Code
 * Integration Tests für Stacks
@@ -158,7 +158,7 @@ Es kann nur einen geben
 [quote]
 Die Software muss es hergeben
 
-* Manualle Upgrade Schritte machen es schwer
+* Manuelle Upgrade Schritte machen es schwer
 * Major Upgrades können Tricky sein
 * Datenbank-Migrationen erschweren Rollback
 
