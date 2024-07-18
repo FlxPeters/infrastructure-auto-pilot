@@ -1,6 +1,6 @@
 [.title]
 = Infrastruktur-Deployment im Auto-Pilot-Mode
-Felix Peters - E. Breuninger GmbH & Co
+Felix Peters - E. Breuninger GmbH & Co | Engineering Lead OCT
 
 :revealjs_theme: white
 :customcss: custom.css
@@ -15,19 +15,10 @@ Felix Peters - E. Breuninger GmbH & Co
 
 :revealjs_pdfseparatefragments: false
 
+[%notitle]
 == Problem
 
-image::images/woody.jpg[]
-
-
-[%notitle]
-=== Problem-Details
-
-* Terraform Provider
-* Docker Images
-* Software Dependencies (Go, Java, Node etc.)
-* Off the Shelf Software
-* ...
+image::images/woody.jpg[width=1000px]
 
 [%notitle]
 === Softwarestack
@@ -36,6 +27,11 @@ image::images/woody.jpg[]
 --
 Wie viele Softwarekomponenten sind in eurem Stack?
 Was ist alles versioniert?
+
+* Terraform Provider
+* Docker Images
+* Software Dependencies (Go, Java, Node etc.)
+* Off the Shelf Software
 --
 
 image::images/vault-stack.png[]
@@ -60,15 +56,22 @@ erzeugt damit relevante technische Schulden!
 * Das steht in Konkurenz zu Features und Projekten
 --
 
-=== Lösungsstrategie 1
+[%notitle]
+=== Problem-Hypothese
 
-Ignorieren
+[.notes]
+--
+* Das ist ein Rucksack
+* Jedes Projekt ist ein Stein darin und macht euch langsamer
+--
+
+image::images/onedoesnot.jpg[]
+
+=== Lösungsstrategie 1
 
 image::images/thisisfine.jpg[width=500px]
 
 === Lösungsstrategie 2
-
-Mehr Personal
 
 image::images/minions.avif[]
 
@@ -78,8 +81,6 @@ image::images/minions.avif[]
 --
 
 === Lösungsstrategie 3
-
-Automatisieren
 
 image::images/automate_all_the_things1.jpeg[]
 
@@ -93,7 +94,10 @@ _am Beispiel Hashicorp Vault_
 
 Der Softwarestack soll jederzeit, *vollständig automatisch* ohne Interaktion eines Menschen aktualisiert werden.
 
-_Im Fehlerfall soll ein Rollback stattfinden._
+[.note]
+--
+Frage - Wer hat eine idee wie wir das lösen?
+--
 
 === Renovate
 
@@ -101,13 +105,6 @@ image::images/renovate.jpg[]
 
 Automated dependency updates +
 Multi-platform and multi-language
-
-=== Renovate
-
-* Automatisches Updaten von Abhängigkeiten als Merge Request
-* Von Terraform-Providern über RDS bis zu Docker Images
-* Konfigurierbar (z.B. nach Package Typ)
-* Shared Service bereitgestellt von OCT
 
 [%notitle]
 === Renovate
@@ -119,21 +116,17 @@ image::images/renovate-list.png[]
 
 image::images/renovate.png[]
 
+=== Renovate
+
+* Automatisches Updaten von Abhängigkeiten als Merge Request
+* Von Terraform-Providern über RDS bis zu Docker Images
+* Konfigurierbar (z.B. nach Package Typ, Timing, etc.)
+* Auto-Merge
+
+[%step]
+**Das bedingt Vertrauen in deinen Code und Automatisierung!**
 
 [.notes]
-
-=== Vorbedingungen
-
-* Semantic Versioning
-* (Trunk based) Development in GitLab
-* Gitlab Pipelines
-* Automatisierung mit z.B. Terraform
-* Tests mit z.B. Terratest
-
-[.notes]
---
-Ohne das habe ich einfach nur einen Haufen Merge Requests!
---
 
 === Auto Pilot Pipeline
 
